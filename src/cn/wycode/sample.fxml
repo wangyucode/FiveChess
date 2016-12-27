@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.wycode.Controller">
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <columnConstraints>
+        <ColumnConstraints />
+        <ColumnConstraints />
+        <ColumnConstraints />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+        <RowConstraints />
+    </rowConstraints>
+    <children>
+        <Canvas fx:id="canvas" height="500.0" onMouseClicked="#handleCanvasClicked" width="500.0" GridPane.hgrow="ALWAYS" GridPane.rowSpan="5" />
+        <Label fx:id="lbIP" prefWidth="200.0" text="本机IP：127.0.0.1" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+        <TextField fx:id="tfIP" promptText="请输入对方IP" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Button fx:id="btnConnect" mnemonicParsing="false" onAction="#handleConnectClicked" text="连接" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+        <TextArea fx:id="taContent" editable="false" prefHeight="371.0" prefWidth="200.0" scrollLeft="2.0" scrollTop="2.0" wrapText="true" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.rowIndex="2" />
+        <Hyperlink text="wycode.cn" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" onMouseClicked="#handleWycodeClicked"/>
+        <Button fx:id="btnStart" mnemonicParsing="false" onAction="#handleStartServer" text="建主" GridPane.columnIndex="2" />
+        <TextField fx:id="tfMessage" disable="true" prefHeight="23.0" prefWidth="149.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+        <Button fx:id="btnSend" disable="true" mnemonicParsing="false" onAction="#handleSendClicked" text="发送" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+        <Button fx:id="btnUndo" mnemonicParsing="false" onAction="#handleUndoClicked" text="悔棋" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+    </children>
+</GridPane>
